@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: rgb(29, 28, 28);
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+#search_sort{
+    padding-bottom: 40px;
+    padding-top: 50px;
+    text-align: start;
+}
+#main_div{
+    height:94vh;
+    width: 94vw;
+    margin:10px;
+    color: white;
+    /* background-color: aqua; */
+}
+#coin_row{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+.box1{
+    display: flex;
+    width: 16%;
+    text-align: start;
+    font-size: 17px;
+}
+.box2{
+    width: 16%;
+    text-align: start;
+    font-size: 17px;
+}
+.box3{
+    width: 17%;
+    text-align: start;
+    font-size: 17px;
+}
+.box4{
+    width: 17%;
+    text-align: start;
+    font-size: 17px;
+}
+.box5{
+    width: 17%;
+    text-align: start;
+    font-size: 17px;
+}
+.box6{
+    width: 17%;
+    text-align: start;
+    font-size: 17px;
+}
+.cryptologo {
+    display: inline;
+    height: 40px;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+.box1 p {
+    padding-top: 9px;
+}
+input {
+    width: 56vw;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(29, 28, 28);
+    border: 1px solid white;
+    border-radius: 4px;
+}
+button {
+    margin-left: 10px;
+    color: white;
+    padding: 15px 19px;
+    width: 260px;
+    border: 1px solid white;
+    background-color: rgb(29, 28, 28);
+}
