@@ -35,15 +35,15 @@ function displayData(data) {
     console.log("arbaj ansari");
     data.forEach(item => {
         let symbolUpperCase = item.symbol.toUpperCase();
-        let price_change_24h = parseFloat(item.price_change_24h).toFixed(2);
-        if(price_change_24h < 0)
+        let price_change_percentage_24h = parseFloat(item.price_change_percentage_24h).toFixed(2);
+        if(price_change_percentage_24h < 0)
             {
                 document.getElementById("coin_listing").innerHTML += `<div id="coin_row">
                 <div class="box1"><img class="cryptologo" src="${item.image}"><p class="coin_details">${item.name}</p></div>
                 <div class="box2"><p class="coin_details">${symbolUpperCase}</p></div>
                 <div class="box3"><p class="coin_details">${item.current_price}</p></div>
                 <div class="box4"><p class="coin_details">${item.total_volume}</p></div>
-                <div class="box5"><p style="color:red" class="coin_detailsprice">${price_change_24h}%</p></div>
+                <div class="box5"><p style="color:red" class="coin_detailsprice">${price_change_percentage_24h}%</p></div>
                 <div class="box6"><p class="coin_details">Mkr Cap: ${item.market_cap}</p></div>
             </div>`
             } else {
@@ -52,7 +52,7 @@ function displayData(data) {
                 <div class="box2"><p class="coin_details">${symbolUpperCase}</p></div>
                 <div class="box3"><p class="coin_details">${item.current_price}</p></div>
                 <div class="box4"><p class="coin_details">${item.total_volume}</p></div>
-                <div class="box5"><p style="color:green" class="coin_detailsprice">${price_change_24h}%</p></div>
+                <div class="box5"><p style="color:green" class="coin_detailsprice">${price_change_percentage_24h}%</p></div>
                 <div class="box6"><p class="coin_details">Mkr Cap: ${item.market_cap}</p></div>
             </div>`
 
@@ -109,7 +109,7 @@ function Percentage(){
         return response.json();
     }).then(data => {
         let sortedDataPer = data.sort((a,b) => {
-            return b.price_change_24h - a.price_change_24h;
+            return b.price_change_percentage_24h - a.price_change_percentage_24h;
         })
 
         document.getElementById("coin_listing").innerHTML = '';
